@@ -1,0 +1,15 @@
+func main () int {
+	int[6] a = {0,1,2,3,4,5};
+
+	int i;
+	for (i = 0; i < 6; i = i + 1) {
+		a[i] = a[i] % 2;
+	}
+
+	for (i = 0; i < 6; i = i + 1) {
+		println(sprint("%d", a[i]));
+	}
+    println("SUCCESS");
+
+	return 0;
+}

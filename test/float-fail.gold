@@ -1,0 +1,7 @@
+func main() int {
+    float y = 2.0;
+    float x = 3.0;
+    int z = 2;
+    int duh = z + x;
+    return 0;
+}

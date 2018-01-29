@@ -1,0 +1,17 @@
+func sayHi() float {
+    float temp = 2.2;
+    return temp;
+}
+
+func main() int {
+    float x;
+    x = sayHi();
+    float y = sayHi();
+    //if(x == 2.2) {
+    //print("SUCCESSS");
+    //}
+    if (x + y == 4.4) {
+    print("SUCCESS");
+    }
+    return 0;
+}

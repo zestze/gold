@@ -1,0 +1,9 @@
+func main() int {
+
+	print("Please enter a string: \n");
+	string s = input();
+	println(s);
+    println("SUCCESS");
+
+	return 0;
+}

@@ -1,0 +1,13 @@
+func main() int {
+	print("Starting test");
+	int a;
+	a = 1;
+	int b;
+	b = 1;
+	if (a == b) {
+		print("Success at declaring out of order");
+        println("SUCCESS");
+	}
+
+	return 0;
+}

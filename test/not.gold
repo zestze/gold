@@ -1,0 +1,10 @@
+func main() int {
+	bool a;
+	a = false;
+	if (!a) {
+		print("!a == true\n");
+        println("SUCCESS");
+	}
+
+	return 0;
+}

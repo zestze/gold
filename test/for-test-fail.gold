@@ -1,0 +1,19 @@
+func main() int {
+	int i; //Can't declare in for statement yet if ever
+	int b = 5;
+	for (i = 0; i < 3; i = i + 1) {
+		print("Should be 3 of these\n");
+		int test = 3;
+		if (b == 5) {
+			print("Inside of for loop has access to variable declared in function\n");
+		}
+	}
+	print("After the for loop");
+	if (test == i) {
+		print("Test available out of scope\n");
+	} //fails
+
+    print("SUCCESS");
+
+	return 0;
+}

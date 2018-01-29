@@ -1,0 +1,16 @@
+func main() int {
+    int a = 1;
+    int b = 2;
+    int c = a + b;
+
+    print("a is: ");
+    print(sprint("%i\n", a));
+    print("b is: ");
+    print(sprint("%i\n", b));
+    print("c is a + b\n");
+    print("c is: ");
+    print(sprint("%i %i \n", c, c));
+
+    print("SUCCESS\n");
+    return 0;
+}

@@ -1,0 +1,14 @@
+func main() int {
+    int a;
+    int b;
+    bool check_equal;
+    a = 1;
+    b = 1;
+    check_equal = (a == b);
+    if (check_equal) {
+        print("a == b\n");
+        println("SUCCESS");
+    }
+
+    return 0;
+}

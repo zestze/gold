@@ -1,0 +1,23 @@
+//type User struct {
+	//Name string;
+	//Age int;
+//}	
+
+func main() int {
+
+	//this is different from our LRM since we are separating fields
+	//with , intead of ; but it might make things easier since ; 
+	//is terminal
+	//TODO: decide whether to use = or change it to : like Name: "Stephen"
+//	User user = {Name="Stephen", Age=3};
+   
+	//print(user.Name);	
+
+    //print("SUCCESS");
+    // wasn't implemented
+	
+	return 0;
+    
+}
+
+

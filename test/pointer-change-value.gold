@@ -1,0 +1,17 @@
+func main() int {
+	string test = "Hey";
+	string test2 = "Please";
+	string ~ptr = @test;
+	
+
+	~ptr = "Changed";
+	string ~new_ptr = @test;
+
+	println(~new_ptr);
+	//Testing for overflow
+	println(test2); 
+
+    println("SUCCESS");
+
+	return 0;
+}

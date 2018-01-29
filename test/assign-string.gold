@@ -1,0 +1,6 @@
+func main() int {
+    string a = "a";
+    string b = "cat"; 
+    println("SUCCESS");
+    return 0;
+}

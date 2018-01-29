@@ -1,0 +1,9 @@
+func main() int {
+    int a = 2;
+    int ~A = @a;
+
+    if (a == ~A) {
+        println("SUCCESS");
+    }
+    return 0;
+}

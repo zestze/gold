@@ -1,0 +1,16 @@
+func main() int {
+	int a;
+	a = 2;
+
+	int b = 3;
+	a = b;
+
+	if (b == 3) {
+		println("Compound assignment works");
+	}
+	if (a == 3) {
+		println("Assignment to a var by another var works as well");
+        println("SUCCESS");
+	}
+	return 0;
+}

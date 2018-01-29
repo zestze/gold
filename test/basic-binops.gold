@@ -1,0 +1,15 @@
+func main() int {
+	int a;
+	int b;
+	int c;
+	a = 1;
+	b = 2;
+	c = a + b;
+	c = b * b;
+	c = c - b;
+	c = c / b;
+	c = c % b;
+    c = a + b + c;
+    print("SUCCESS");
+	return 0;
+}

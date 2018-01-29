@@ -1,0 +1,10 @@
+func main() int {
+    if (4 < 3) {
+        print("4 < 3\n");
+    }
+    else {
+        print("3 < 4\n");
+        println("SUCCESS");
+    }
+	return 0;
+}

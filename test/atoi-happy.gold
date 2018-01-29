@@ -1,0 +1,16 @@
+func main() int {
+	println("Actual number = 5");
+	int number = 5;
+
+	println("Partial number = 45jk");
+	string partial = "45jk";
+
+	println("Not a number = erry");
+	string none = "erry";
+
+	println("Should add to 50");
+	int new_num = atoi(partial) + atoi(none) + number;
+	println(sprint("%i", new_num));
+	
+	return 0;
+}

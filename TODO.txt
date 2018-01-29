@@ -1,0 +1,181 @@
+TODO for PLT Compiler, GOLD
+=============================
+
+\ - could have each "to-do item" with
+    simple tasks for right now, and
+    later update TODO list with more
+    complicated and robust tests
+
+\ - should we check for other 'ambiguous' situations,
+    things that might have conflicts similar to
+    Dangling Else problem, etc. ?
+
+
+COMMENTS
+-------- 
+- Can comments nest? (presumably not).
+  \ - [ ] Design test function for this, to see if Compiler throws
+          appropriate warning.
+- [x] Comments Implemented
+
+IDENTIFIERS
+-----------
+- LRM states alphabetic character or underscore followed by
+  alphanumeric characters and/or underscores.
+  It doesn't seem like our Parser implements this.
+- [x] Update Compiler for above issue [alphanumeric-names.gold]
+
+KEYWORDS
+--------
+\ - For Keywords, need to ensure that incompatible types
+    don't interact with each other, because our language
+    is *STRONGLY TYPED*
+\ - Development process: first, develop a test file that
+    robustly tests and displays keywords function.
+    Then, implement the keyword in the compiler.
+
+// the if, elif, else family will have to have many test
+   functions that go through many issues we could encounter.
+   Nested ifs, dangling else, elif/else not preceded by if, etc.
+- [x] if
+  \ - [ ] Passes 'advanced' / 'weird' rules
+- [ ] elif
+  \ - [ ] Passes 'advanced' / 'weird' rules
+- [x] else
+  \ - [ ] Passes 'advanced' / 'weird' rules
+
+- [x] func // seems to work at basic level
+  \ - [ ] Devise more complicated tests for function definitions.
+  \ - [x] IMPORTANT: doesn't seem like args work. args work, but not up to
+  LRM specs (order in other direction)
+- [ ] return
+- [ ] for
+- [ ] int
+- [ ] string
+- [ ] float
+- [ ] true
+- [ ] false
+- [ ] type
+- [ ] struct // big one, will have own section.
+- [ ] break
+- [ ] continue
+- [ ] null
+- [ ] print
+- [ ] input
+- [ ] bool
+- [ ] self
+- [ ] void
+
+LITERALS
+--------
+- [x] Update \", \r, \n, and \t to have their conventional meanings.
+  \ - [ ] Rest of Character Literals: How are these diff than strings?
+- [ ] Floating Point: check if works
+  \ - [x] Ast
+  \ - [ ] Semant        NEED TO CHECK IF BINOPS ARE OF SAME TYPE
+  \ - [x] Parser
+  \ - [x] Scanner
+  \ - [x] CodeGen
+  \ - [x] MAKE NOTE IN LRM THAT FLOATS ARE (digit)+ (.) (digit)+
+- [ ] Boolean: check if works
+
+OPERATORS
+---------
+\ - first, create a test function that uses the operator
+    in multiple ways. Try to be creative with how complicated
+    you can make the use of the operator.
+    Then, update compiler so that the test file executes properly
+
+Unary
+-----
+- [x] -expr (num) [negative]
+- [x] !expr (bool) [negate]
+- [ ] &expr (identifier) [address]
+  \ - [ ] @expr (identifier) [address]
+  \ - decided to use '@' in place of '&'
+- [ ] *expr (identifier) [dereference]
+  \ - [ ] ~expr (identifier) [dereference]
+  \ - decided to use '~' in place of '*'
+
+// note: should binary ops work for more than just int?
+// they seem to work for boolean sincce boolean can be
+// converted to int in codegen
+// BUT would == work for a string??? I don't think so.
+// need to get them to work with floats.... ********
+
+Binary
+------
+- [x] expr (num) + expr (num) [addition]
+- [x] expr (num) - expr (num) [substraction]
+- [x] expr (num) * expr (num) [multiplication]
+- [x] expr (num) / expr (num) [division]
+- [x] expr (num) % expr (num) [modulus]
+
+// note: should relational ops work for more than just int?
+
+Relational
+----------
+- [x] expr (num) < expr (num) [less-than]
+- [x] expr (num) > expr (num) [less-than]
+- [x] expr (num) == expr (num) [equal-to]
+- [x] expr (num) <= expr (num) [less-than-or-equal-to]
+- [x] expr (num) >= expr (num) [greater-than-or-equal-to]
+- [x] expr (num) != expr (num) [not-equal-to]
+
+Logical
+-------
+- [x] expr (bool) && expr (bool) [logical-and]
+- [x] expr (bool) || expr (bool) [logical-or]
+
+Assignment
+----------
+- [ ] rvalue, lvalue stuff
+- [ ] variable declarations need to be outside of beginning of code block
+
+SCOPE
+-----
+
+FUNCTION CALLS
+--------------
+Returning
+- [x] Return Strings?
+- [x] Return Int?
+- [x] Return Bool? // was working, I was just being dumb
+- [x] Return Float?
+- [ ] Return void?
+- [ ] Return tstruct?
+- [ ] Return intP?
+- [ ] Return stringP?
+
+Arguments
+- [ ] Int ARgs
+- [ ] String ARgs
+...
+
+TYPES
+-----
+- [ ] Type Casting?
+
+POINTERS
+--------
+\ - see above unary operators for notation changes.
+- [ ] @expr (identifier) [address]
+- [ ] ~expr (identifier) [dereference]
+- [ ] Pointer Types
+  \ - [ ] intP
+  \ - [ ] stringP
+  \ - [ ] possible tstructP? (won't have enough time to implement probably)
+
+- [ ] Scanner
+- [ ] Parser
+- [ ] Ast
+- [ ] Semant
+- [ ] Codegen
+
+STRUCTS
+-------
+\ - probably going to occur at end
+
+TESTING
+-------
+- [ ] Make list of testing functions, if they work or not for reference.

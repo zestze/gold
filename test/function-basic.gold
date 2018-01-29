@@ -1,0 +1,25 @@
+
+func print_square(int dim) void {
+	int i;
+	int j;
+	for(i = 0; i < dim; i = i + 1) {
+		print("| ");
+		for(j = 0; j < dim; j = j + 1) {
+			print("Hi ");
+		}
+		println("|");
+	}
+
+}
+
+
+func main () int {
+	int dim = 8;
+	int board_size = dim * dim;
+//	int [board_size] current_board;
+
+	print_square(8);
+    println("SUCCESS");
+
+	return 0;
+}

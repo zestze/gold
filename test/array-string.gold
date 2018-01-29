@@ -1,0 +1,13 @@
+func main() int {
+
+    int len = 3;
+    string[3] blah;
+    blah[1] = "hello";
+    int i;
+    for (i = 0; i < 3; i = i + 1) {
+        blah[i] = "hello";
+    }
+
+    print(sprint("%s", blah[1]));
+    println("SUCCESS");
+}

@@ -1,0 +1,12 @@
+func main() int {
+	int a;
+	int b;
+	a = 1;
+	b = -a;
+	if (a + b == 0) {
+		print("a == -b\n");
+        println("SUCCESS");
+	}
+
+	return 0;
+}

@@ -1,0 +1,36 @@
+For Keeping Track of Which Functions are Correctly Working
+==========================================================
+
+Working
+-------
+alphanumeric-names
+assign-int
+assign-string
+basic-binops
+comparison-int
+compound-assignment
+func-simple
+func-simple-args
+func-simple-bool
+func-simple-string
+hello
+keyword-else
+keyword-if
+negation
+not
+out-of-order-decl
+scoping-simple-int
+scoping-simple-blocks (should fail)
+
+Not Working
+-----------
+array-with-len-int
+for-test
+scoping-simple-string
+sprint-int
+sprint-string
+struct-with-primitive-vars
+
+Not Done Writing (testing function is incomplete itself)
+----------------
+keywords-all

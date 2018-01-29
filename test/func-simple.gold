@@ -1,0 +1,20 @@
+func sayBye() int {
+    print("Bye");
+    return 2;
+}
+
+func sayHi() int {
+    print("Hi");
+    return sayBye();
+}
+
+func main() int {
+    int temp;
+    temp = sayHi();
+    if(temp == 2) {
+        print("sayHi worked");
+        println("SUCCESS");
+    }
+
+    return 0;
+}

@@ -1,0 +1,15 @@
+func main() int {
+    string a = "a";
+    string b = "cat";
+
+    print("a is: ");
+    string c = sprint("%s\n", a);
+	print(c);
+
+    print("b is: ");
+    string d = sprint("%s\n\n", b);
+    print(d);
+
+    print("SUCCESS\n");
+    return 0;
+}

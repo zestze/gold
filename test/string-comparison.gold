@@ -1,0 +1,8 @@
+func main() int {
+    string word = "a";
+    if (word == "a") {
+        println("string compar works");
+        println("SUCCESS");
+    }
+    return 0;
+}

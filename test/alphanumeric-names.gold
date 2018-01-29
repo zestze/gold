@@ -1,0 +1,10 @@
+func main() int {
+    //int a2;
+    //a2 = 1;
+    int a2;
+    a2 = 1;
+    if (a2 == 1) {
+        println("SUCCESS");
+    }
+    return 0;
+}

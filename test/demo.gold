@@ -1,0 +1,126 @@
+// demo.gold
+// example of comments working
+
+// can showcase types,
+// arrays, pointers,
+// function calls and arg passes
+
+func roll() int {
+    return rand() % 20;
+}
+
+func init_health() int {
+    return 100;
+}
+
+func updt_health(int hlth, int dmg) int {
+    return hlth - dmg;
+}
+
+func options(string op1, string op2, string op3, string op4) bool {
+    println("Now, here are your options.");
+    println("You can press a single key to choose. 1, 2, 3, or 4.");
+    println(sprint("1: %s", op1));
+    println(sprint("2: %s", op2));
+    println(sprint("3: %s", op3));
+    println(sprint("3: %s", op4));
+
+    string response = input();
+    string opt;
+    int resp_num = atoi(response);
+    println("");
+    println("################################");
+
+    if (resp_num == 1) {
+        println(sprint("You chose %s. Let's see if that worked!", op1));
+        opt = op1;
+    }
+    if (resp_num == 2) {
+        println(sprint("You chose %s. Let's see if that worked!", op2));
+        opt = op2;
+    }
+    if (resp_num == 3) {
+        println(sprint("You chose %s. Let's see if that worked!", op3));
+        opt = op3;
+    }
+    if (resp_num == 4) {
+        println(sprint("You chose %s. Let's see if that worked!", op4));
+        opt = op4;
+    }
+    //else {
+        //println("doofus.");
+        //println(sprint("You chose %s. Let's see if that worked!", op4));
+        //opt = op4;
+    //}
+    if (resp_num > 4 || resp_num < 1) {
+        println("doofus");
+        println(sprint("You chose %s. Let's see if that worked!", op4));
+        opt = op4;
+    }
+
+    int success = roll();
+    println("...\n");
+    println("###################");
+    println(sprint("You rolled a %i.", success));
+
+    bool hurt;
+    if (success > 10) {
+        println(sprint("It worked! %s was a good idea.", opt));
+        hurt = false;
+    }
+    else {
+        println(sprint("That didn't work. %s was a horrid idea.", opt));
+        hurt = true;
+    }
+
+    return hurt;
+}
+
+func choose_player(int players) int {
+    int r = rand();
+    return r % players;
+}
+
+func main() int {
+
+    int max_players = 4;
+    string[4] player_names;
+    int[4] player_healths;
+    
+
+    int i;
+    for (i = 0; i < 4; i = i + 1) {
+        println("########################################");
+        println("Welcome to Gold! Please tell me your name");
+        //println("Or type X to to say no more new players");
+        string reply = input();
+
+        player_names[i] = reply;
+        player_healths[i] = init_health();
+    }
+    println("");
+
+    // Dungeon Master presents scenario
+    println("#######################################################");
+    println("Players, you start in a dungeon. Chained, and forgotten.");
+    println("To your left sits a Plumbus. You've never used one, but maybe it can help you get free. But to go where? and why?");
+    println("Above your head you notice there's a wooden ceiling. Maybe you can climb and break it? But what lies above you?");
+    println("Below you there is a dog. Adorable, must be a good boi. But he's in this cell with you - to protect you or his master?");
+    println("Lastly, you notice you're sleep deprived. Give in and take a nap? OR persevere?");
+    println("");
+
+    // Choose a player to prompt
+    int choice = choose_player(max_players);
+    println("############################");
+    string prompt = sprint("%s it is your choice.", player_names[choice]);
+    print(prompt);
+    bool hurt = options("Plumbus", "Break Wood", "Pet Doggo", "Give Up");
+    if (hurt == true) {
+        player_healths[choice] = updt_health(player_healths[choice], 100);
+        println(sprint("Whoops %s it seems you died.", player_names[choice])); // should have a check here.
+    }
+
+
+
+    return 0;
+}

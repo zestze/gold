@@ -1,0 +1,18 @@
+func sayBye() string {
+    return "Bye";
+}
+
+func sayHi() string {
+    print(sayBye());
+    return "Hi";
+}
+
+func main() int {
+    string temp;
+    temp = sayHi();
+    if(temp == "Hi") {
+        print("SUCCESS");
+    }
+
+    return 0;
+}

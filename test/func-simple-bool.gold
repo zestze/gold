@@ -1,0 +1,15 @@
+func sayHi() bool {
+    bool temp;
+    temp = true;
+    return temp;
+}
+
+func main() int {
+    bool temp;
+    temp = sayHi();
+    if(temp == true) {
+        print("Hi");
+        println("SUCCESS");
+    }
+    return 0;
+}

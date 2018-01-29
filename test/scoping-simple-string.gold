@@ -1,0 +1,21 @@
+// Expected Output:
+// rip
+// rekt
+// rip
+func main() int {
+    print("Expected Output:")
+    print("rip")
+    print("rekt")
+    print("rip")
+    print("Actual Output:")
+    string a = "rip";
+    print(sprint("%s\n", a));
+    {
+        a = "rekt";
+        print(sprint("%s\n", a));
+    }
+    print(sprint("%s\n", a));
+
+    println("SUCCESS");
+    return 0;
+}

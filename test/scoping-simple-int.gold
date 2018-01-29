@@ -1,0 +1,27 @@
+// Expected Output:
+// 3
+// 4
+// 3
+func main() int {
+	int a = 3;
+	if (a == 3) {
+		print("a == 3 before");
+	}
+//	print(sprint("%i\n", a));
+	{
+		a = 4;
+//		print(sprint("%i\n", a));
+		print("a is changed to 4 in the block");
+	}
+//	print(sprint("%i\n", a));
+	if (a == 3) {
+		print("a == 3 after\n");
+	} else {
+		if (a == 4) {
+			print("a == 4 after");
+		}
+	}
+
+    println("SUCCESS");
+	return 0;
+}

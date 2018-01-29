@@ -1,0 +1,16 @@
+func main() int {
+	int[4] a;
+	int[4] arr;
+	arr = {1,2,3,4};
+	int[3] b = {0,0,1}; 
+		
+	if (b[1] == 0) {
+		//print("b[1] == 0");
+	}
+	if (b[2] != 0) {
+		//print("b[2] != 0");
+	}
+	print("SUCCESS");
+	return 0;
+    
+}
