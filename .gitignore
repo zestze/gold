@@ -1,0 +1,8 @@
+*.cmx
+*.cmo
+*.cmi
+*.o
+*.s
+*.ll
+*.exe
+*.swp*

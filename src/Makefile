@@ -19,7 +19,7 @@ gold.native :
 .PHONY : clean
 clean :
 	ocamlbuild -clean
-	cd test/; ./clean.sh
+	cd ../test/; ./clean.sh
 	rm -rf testall.log *.diff gold scanner.ml parser.ml parser.mli
 	rm -rf *.cmx *.cmi *.cmo *.cmx *.o *.s *.ll *.out *.exe
 

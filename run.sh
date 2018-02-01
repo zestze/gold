@@ -35,10 +35,13 @@ if [ "$target" == "--list" ]; then
         exit
 fi
 
+# Move to src dir
+cd src
+
 # test all functions.
 if [ "$target" == "--all" ]; then
         # implement doofus.
-        funcs="$(ls test \
+        funcs="$(ls ../test \
                 | grep .gold \
                 | cut -d "." -f 1)"
 
@@ -48,12 +51,12 @@ if [ "$target" == "--all" ]; then
         for func in $funcs
         do
                 printf "######## $func ########\n" 
-                ./compile.sh test/"$func".gold >> /dev/null 2&>1
-                test/"$func".exe
+                ./compile.sh ../test/"$func".gold >> /dev/null 2&>1
+                ../test/"$func".exe
         done
 
         make clean >> /dev/null
-        cd test && ./clean.sh >> /dev/null
+        cd ../test && ./clean.sh >> /dev/null
         exit
 fi
 
@@ -62,11 +65,11 @@ make clean >> /dev/null
 make >> /dev/null
 
 # compile
-./compile.sh test/"$target".gold
+./compile.sh ../test/"$target".gold
 
 # execute
-test/"$target".exe
+../test/"$target".exe
 
 # clean
 make clean >> /dev/null
-cd test && ./clean.sh >> /dev/null
+cd ../test && ./clean.sh >> /dev/null
