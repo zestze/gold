@@ -13,17 +13,48 @@ for a specific struct. This allows developers to take advantage of object orient
 
 # Requirements
 
-- Ocaml
-- LLVM
-- Moe, LLVM-Ocaml bindings
+- Ocaml and OPAM
+- LLVM and its development libraries
 
 # Usage
 
-The test script in the root directory has a flag called '--help' that should
-describe its use. This is the easiest way to run the test scripts in the test/
+The test script in the root directory has a flag called `--help` that should
+describe its use. This is the easiest way to run the test scripts in the `test/`
 directory. To develop new source files in the GOLD language, simply create a source
-file with the .gold suffix, and place it in the test/ directory. Following this,
+file with the `.gold` suffix, and place it in the `test/` directory. Following this,
 the test script should work consistently across already-existing source files,
 and recently developed ones.
 
+Currently, for each invocation of the `run.sh` script, the entire compiler gets rebuilt,
+and then the targeted source file is compiled and executed.
+
+To showcase the strongest capabilities of the language, run the `stair-stepper.gold` source file.
+It utilizes many of the language constructs that GOLD successfully employs.
+
 # Overview of Language Capabilities
+
+Primitive data types
+- bool
+- int
+- float
+- string
+
+Derived data types
+- pointers
+	- note: pointer semantics use `~` for dereferencing and `@` for addressing
+- arrays
+
+Control Flow
+- if
+- else
+- for
+- while
+
+Library Functions
+- print
+- println
+- sprint
+- input
+- srand
+- rand
+- atoi
